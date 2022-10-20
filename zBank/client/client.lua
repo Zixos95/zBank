@@ -6,7 +6,7 @@ historique = {}
 Trad = zBankTranslation[Language]
 gettedrib = 0
 PlayerMoney = 0
-moulahbank = 0
+moneybank = 0
 
 Citizen.CreateThread(function()
 	while esx == nil do
@@ -151,7 +151,7 @@ function OpenBankMenuAccount(use)
                     
                 end
             })
-            RageUI.Button(Trad["central_menu_bank"]..moulahbank..Trad["symbol_money"], nil, {}, true, {
+            RageUI.Button(Trad["central_menu_bank"]..moneybank..Trad["symbol_money"], nil, {}, true, {
                 onSelected = function()
                     
                 end
@@ -496,7 +496,7 @@ function OpenAtmMenuAccount(use)
                     
                 end
             })
-            RageUI.Button(Trad["central_menu_bank"]..moulahbank..Trad["symbol_money"], nil, {}, true, {
+            RageUI.Button(Trad["central_menu_bank"]..moneybank..Trad["symbol_money"], nil, {}, true, {
                 onSelected = function()
                     
                 end
@@ -892,7 +892,7 @@ end
 
 RegisterNetEvent("zBank:bank")
 AddEventHandler("zBank:bank", function(money)
-    moulahbank = tonumber(money)
+    moneybank = tonumber(money)
 end)
 
 function GetPlayerMoney(action)
